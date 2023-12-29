@@ -1,9 +1,10 @@
 "use client";
 
-import { useSignal } from "@preact-signals/safe-react";
+import { signal } from "@preact-signals/safe-react";
+
+const count = signal(0);
 
 export const Counter = () => {
-  const count = useSignal(0);
   return (
     <div className="flex flex-col items-center mb-20">
       <h1>Signals counter</h1>
